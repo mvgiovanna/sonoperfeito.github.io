@@ -1,0 +1,5 @@
+# pacote para envio manual (não é necessário com o Git)
+sonoperfeito-site.zip
+
+# configurações locais
+.claude/

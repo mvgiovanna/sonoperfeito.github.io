@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sono Perfeito — Respire melhor. Durma melhor.</title>
+<meta name="description" content="Automação residencial para o seu sono: sensores e um app que ajustam temperatura, umidade e luz do quarto enquanto você dorme.">
+<meta property="og:title" content="Sono Perfeito">
+<meta property="og:description" content="Temperatura, umidade e luz no ritmo do seu sono.">
+<meta property="og:url" content="https://sonoperfeito.app">
+<meta name="theme-color" content="#070a1f">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="brand"><img src="icon.svg" alt="" width="28" height="28"><span>Sono Perfeito</span></a>
+  <nav>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#recursos">Recursos</a>
+    <a href="ciencia.html">Ciência</a>
+    <a href="#app">App</a>
+    <a href="#duvidas">Dúvidas</a>
+    <a href="#contato" class="nav-cta">Quero o meu</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="s-dark aurora hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="pill-tag">🌙 Automação residencial para o sono</p>
+        <h1>Respire melhor.<br><em>Durma melhor.</em></h1>
+        <p class="hero-sub">Para adormecer, o corpo precisa esfriar, e noites quentes encurtam o sono. Sensores e um app mantêm a temperatura, a umidade e a luz do seu quarto no ponto certo, a noite inteira.</p>
+        <div class="cta-row left">
+          <a class="btn primary" href="#contato">Quero o Sono Perfeito</a>
+          <a class="btn ghost" href="#como-funciona">Como funciona</a>
+        </div>
+        <p class="hero-proof">Baseado em pesquisas publicadas nas revistas científicas <i>Sleep</i> e <i>One Earth</i>. <a href="ciencia.html">Ver estudos</a></p>
+      </div>
+
+      <div class="hero-panel reveal" aria-label="Exemplo do quarto monitorado">
+        <div class="hp-head">
+          <span>🛏 Quarto · agora</span>
+          <span class="hp-clock" id="heroClock">01:32</span>
+        </div>
+        <div class="hp-gauges">
+          <div class="gauge g-temp" data-val="23" data-suffix="°" data-pmin="10" data-pmax="32">
+            <svg viewBox="0 0 120 120"><circle class="g-bg" cx="60" cy="60" r="50"/><circle class="g-fg" cx="60" cy="60" r="50"/></svg>
+            <div class="g-val"><span class="g-ico">🌡</span><b>23°</b><small>temperatura</small></div>
+          </div>
+          <div class="gauge g-hum" data-val="55" data-suffix="%" data-pmin="0" data-pmax="100">
+            <svg viewBox="0 0 120 120"><circle class="g-bg" cx="60" cy="60" r="50"/><circle class="g-fg" cx="60" cy="60" r="50"/></svg>
+            <div class="g-val"><span class="g-ico">💧</span><b>55%</b><small>umidade</small></div>
+          </div>
+          <div class="gauge g-luz" data-val="2700" data-suffix="K" data-pmin="7000" data-pmax="1500">
+            <svg viewBox="0 0 120 120"><circle class="g-bg" cx="60" cy="60" r="50"/><circle class="g-fg" cx="60" cy="60" r="50"/></svg>
+            <div class="g-val"><span class="g-ico">☀</span><b>2700K</b><small>luz</small></div>
+          </div>
+        </div>
+        <ul class="hp-status">
+          <li>❄ Ar em 23° <i>✓</i></li>
+          <li>💧 Umidificador ligado <i>✓</i></li>
+          <li>📺 TV desligada <i>✓</i></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="s-light" id="como-funciona">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">como funciona</p>
+        <h2>Mede. Decide. Ajusta.</h2>
+        <p class="sub">Tudo acontece sozinho, enquanto você dorme.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-n">1</span>
+          <div class="step-ico"><span class="sensor static"></span></div>
+          <h3>Mede</h3>
+          <p>Um sensor discreto em cada cômodo acompanha temperatura, umidade e luz o tempo todo.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">2</span>
+          <div class="step-ico">📱</div>
+          <h3>Decide</h3>
+          <p>O app compara as leituras com a faixa que você escolheu e com o que você contou sobre as últimas noites.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">3</span>
+          <div class="step-ico">⚙</div>
+          <h3>Ajusta</h3>
+          <p>Liga o ar, o umidificador, desliga a TV e esquenta a luz — sem você levantar da cama.</p>
+        </li>
+      </ol>
+
+      <div class="house-stage">
+        <div class="iso-wrap reveal">
+          <div class="iso">
+            <div class="iso-floor">
+              <div class="iso-room r-office"><div class="furn desk"></div><div class="furn chair"></div><span class="sensor"></span></div>
+              <div class="iso-room r-bed"><div class="furn bed"><i></i></div><span class="sensor"></span></div>
+              <div class="iso-room r-living"><div class="furn sofa"></div><div class="furn rug"></div><div class="furn tv"></div><div class="furn plant"></div><span class="sensor"></span></div>
+            </div>
+          </div>
+          <span class="iso-tag tag-office">🖥 Escritório</span>
+          <span class="iso-tag tag-bed">🛏 Quarto</span>
+          <span class="iso-tag tag-living">🛋 Sala</span>
+        </div>
+        <div class="metric-cards">
+          <p class="eyebrow left">cada cômodo, em tempo real</p>
+          <div class="mcard reveal">
+            <div class="mc-top"><span class="ic">🌡</span>Temperatura</div>
+            <div class="mc-row"><b data-live="temp">24,4°</b>
+              <svg viewBox="0 0 100 34" class="spark"><path d="M2 26 C14 20 20 8 32 14 S50 30 60 18 S78 2 98 22" stroke="#ef5b5b"/></svg></div>
+          </div>
+          <div class="mcard reveal">
+            <div class="mc-top"><span class="ic">💧</span>Umidade</div>
+            <div class="mc-row"><b data-live="hum">58%</b>
+              <svg viewBox="0 0 100 34" class="spark"><path d="M2 14 C14 26 24 30 36 22 S54 6 66 18 S86 30 98 8" stroke="#4c8dff"/></svg></div>
+          </div>
+          <div class="mcard reveal">
+            <div class="mc-top"><span class="ic">☀</span>Luz</div>
+            <div class="mc-row"><b>2700K</b>
+              <div class="kbar"><div class="ktrack"><span style="left:22%"></span></div><div class="klab"><small>quente</small><small>fria</small></div></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROBLEMA E SOLUÇÃO -->
+  <section class="s-light s-tight" id="recursos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">por que funciona</p>
+        <h2>Seu corpo precisa esfriar para dormir.<br><em>O quarto precisa ajudar.</em></h2>
+      </div>
+      <div class="devices">
+        <div class="dev reveal">
+          <div class="dev-visual">
+            <div class="ac-unit"><div class="ac-display">29°</div><div class="ac-vent"></div></div>
+            <div class="airflow"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="meter" data-kind="temp" data-from="29" data-to="23" data-unit="°">
+            <div class="m-head"><b class="m-val">29°</b><span class="m-label" data-bad="noite quente" data-good="no ponto">noite quente</span></div>
+            <div class="m-track"><span class="m-fill"></span><span class="m-dot"></span></div>
+            <div class="m-scale"><small>quente</small><small>ideal</small></div>
+          </div>
+          <h3>Temperatura no ponto</h3>
+          <p>Noites quentes atrasam o sono e encurtam o tempo dormido. Você escolhe a temperatura e o app mantém o ar estável até de manhã.</p>
+        </div>
+        <div class="dev reveal">
+          <div class="dev-visual">
+            <div class="humidifier"><div class="h-top"></div><div class="h-drop">💧</div><div class="h-tank"><div class="h-water"></div></div><div class="h-led"></div></div>
+          </div>
+          <div class="meter" data-kind="hum" data-from="32" data-to="55" data-unit="%">
+            <div class="m-head"><b class="m-val">32%</b><span class="m-label" data-bad="ar seco" data-good="na medida">ar seco</span></div>
+            <div class="m-track"><span class="m-fill"></span><span class="m-dot"></span></div>
+            <div class="m-scale"><small>seco</small><small>ideal</small></div>
+          </div>
+          <h3>Umidade na medida</h3>
+          <p>Ar seco resseca nariz e garganta. Quando a umidade cai, o umidificador liga sozinho e você acorda respirando bem.</p>
+        </div>
+        <div class="dev reveal">
+          <div class="dev-visual">
+            <div class="lamp"><div class="bulb"></div></div>
+          </div>
+          <div class="meter" data-kind="luz" data-from="6500" data-to="2700" data-unit="K">
+            <div class="m-head"><b class="m-val">6500K</b><span class="m-label" data-bad="luz branca" data-good="luz quente">luz branca</span></div>
+            <div class="m-track"><span class="m-fill"></span><span class="m-dot"></span></div>
+            <div class="m-scale"><small>fria</small><small>quente</small></div>
+          </div>
+          <h3>Luz no ritmo do sono</h3>
+          <p>Luz branca e forte à noite atrasa o sono. No fim do dia, a luz esquenta e diminui aos poucos, preparando o corpo para dormir.</p>
+        </div>
+      </div>
+
+      <div class="sci-stat reveal">
+        <b>18–25 °C</b>
+        <p>A temperatura ideal para dormir varia de pessoa para pessoa. Por isso, o Sono Perfeito se ajusta a você.</p>
+      </div>
+      <p class="sci-more reveal">Baseado em pesquisas publicadas em revistas científicas como <i>Sleep</i> e <i>One Earth</i>. <a href="ciencia.html">Ver estudos →</a></p>
+
+      <div class="night-panel" id="uma-noite">
+        <div class="stars" aria-hidden="true"></div>
+        <div class="section-head dark reveal">
+          <p class="eyebrow">na prática: uma noite</p>
+          <h2>Um toque em <em>Hora de dormir</em>.<br>O resto é com a gente.</h2>
+        </div>
+        <div class="night-ctrl reveal">
+          <button class="bedtime-big" id="bedtimeBtn">🌙 Hora de dormir <span>⚙</span></button>
+          <div class="night-clock" id="nightClock" aria-live="polite">22:30</div>
+        </div>
+        <ol class="timeline" id="timeline">
+          <li data-t="22:30"><span class="tl-dot">🌙</span><b>22:30</b><h3>Hora de dormir</h3><p>A luz esquenta para 2700K e começa a diminuir.</p></li>
+          <li data-t="22:45"><span class="tl-dot">📺</span><b>22:45</b><h3>TV desligada</h3><p>Nada de acordar com a TV ligada.</p></li>
+          <li data-t="23:00"><span class="tl-dot">❄</span><b>23:00</b><h3>Ar em 23°</h3><p>O quarto chega na temperatura que você escolheu.</p></li>
+          <li data-t="01:32"><span class="tl-dot">💧</span><b>01:32</b><h3>Umidificador ligado</h3><p>A umidade caiu para 44% — o app corrige sozinho.</p></li>
+          <li data-t="06:30"><span class="tl-dot">☀</span><b>06:30</b><h3>Bom dia</h3><p>O app pergunta como foi a sua noite.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <section class="s-light" id="app">
+    <div class="wrap app-grid">
+      <div>
+        <div class="section-head left reveal">
+          <p class="eyebrow">o app</p>
+          <h2>Cada cômodo,<br>cada noite.</h2>
+          <p class="sub">Veja como está o quarto agora e ajuste o que quiser — ou deixe que o app cuide disso.</p>
+        </div>
+        <div class="feature-list" role="tablist">
+          <button class="feat on" data-go="home" role="tab"><span class="ic">🌡</span><div><b>Ambiente</b><small>Temperatura e umidade de cada cômodo, o histórico da noite e o tempo lá fora.</small></div></button>
+          <button class="feat" data-go="ac" role="tab"><span class="ic">❄</span><div><b>Ar-condicionado</b><small>Ajuste fino da temperatura, sem procurar o controle no escuro.</small></div></button>
+          <button class="feat" data-go="hum" role="tab"><span class="ic">💧</span><div><b>Umidificador</b><small>Regras automáticas, como “liga abaixo de 45%”.</small></div></button>
+          <button class="feat" data-go="tv" role="tab"><span class="ic">📺</span><div><b>TV</b><small>Desliga sozinha quando chega a hora de dormir.</small></div></button>
+        </div>
+      </div>
+
+      <div class="phone reveal" id="phone">
+        <div class="notch"></div>
+        <div class="screen" data-screen="home">
+          <div class="sb"><span>22:41</span><span class="bat"></span></div>
+
+          <div class="scr scr-home">
+            <div class="hello"><h3>Olá, boa noite</h3><button class="plus" aria-label="Adicionar cômodo">+</button></div>
+            <div class="outside"><span>Lá fora</span><span>🌡 21°</span><span>💧 80%</span></div>
+            <div class="pcard">
+              <div class="pc-title">🛏 Quarto</div>
+              <div class="pair"><div><b>24°</b><small>temperatura</small></div><div><b>58%</b><small>umidade</small></div></div>
+              <small class="muted">Esta noite 23–25° · 55–62%</small>
+              <svg viewBox="0 0 200 36" class="mini-chart"><path d="M0 26 C50 16 100 28 200 12" stroke="#ef5b5b"/><path d="M0 16 C60 24 120 10 200 24" stroke="#4c8dff"/></svg>
+              <div class="seg"><button data-go="tv">TV</button><button data-go="ac" class="on">Ar</button><button data-go="hum">Umidif.</button></div>
+            </div>
+            <div class="pcard small"><div class="pc-title">🛋 Sala</div><div class="pair"><div><b>26°</b></div><div><b>52%</b></div></div></div>
+            <a class="bed-btn" href="#uma-noite">🌙 Hora de dormir <span>⚙</span></a>
+          </div>
+
+          <div class="scr scr-ac">
+            <button class="back" data-go="home">← Quarto</button>
+            <div class="pcard center">
+              <p class="state">Ligado · Frio</p>
+              <div class="dial">
+                <button class="dbtn" data-ac="-1" aria-label="Diminuir">−</button>
+                <div class="dial-ring"><span>❄</span><b id="acVal">23°</b></div>
+                <button class="dbtn" data-ac="1" aria-label="Aumentar">+</button>
+              </div>
+              <small class="muted">No ambiente: 24,7° · 41%</small>
+              <button class="pill">⏻ Desligar</button>
+            </div>
+          </div>
+
+          <div class="scr scr-hum">
+            <button class="back" data-go="home">← Quarto</button>
+            <div class="pcard center">
+              <p class="state">Ligado</p>
+              <div class="hum-ring"><span>💧</span><b id="humVal">41%</b></div>
+              <small class="muted">umidade no ambiente<br>Consumindo 24 W</small>
+            </div>
+            <div class="pcard rule">
+              <div><b>Liga abaixo de 45%</b><small>regra automática</small></div>
+              <button class="switch on" id="humRule" role="switch" aria-checked="true" aria-label="Regra automática"></button>
+            </div>
+          </div>
+
+          <div class="scr scr-tv">
+            <button class="back" data-go="home">← Quarto</button>
+            <div class="pcard center">
+              <p class="state">TV do quarto</p>
+              <div class="hum-ring tv"><span>📺</span><b>Desliga</b></div>
+              <small class="muted">automaticamente na<br>hora de dormir</small>
+            </div>
+          </div>
+
+          <div class="tabbar">
+            <button data-go="home" class="on"><i>🌡</i>Ambiente</button>
+            <button data-go="ac"><i>❄</i>Ar</button>
+            <button data-go="hum"><i>💧</i>Umidif.</button>
+            <button data-go="tv"><i>📺</i>TV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APRENDE -->
+  <section class="s-morning" id="aprende">
+    <div class="sun"></div>
+    <div class="rays"></div>
+    <svg class="dunes" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 120 C200 60 420 70 640 110 S1100 40 1600 100 V260 H0Z" fill="#a7a3cf" opacity=".75"/>
+      <path d="M0 170 C260 130 520 200 820 160 S1300 120 1600 170 V260 H0Z" fill="#d9bfb0"/>
+    </svg>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">aprende com você</p>
+        <h2><em>De manhã,</em> uma pergunta.<br>Noites melhores a cada resposta.</h2>
+        <p class="sub dark-ink">Cada pessoa dorme de um jeito. Por isso o app pergunta como foi a sua noite e ajusta as próximas com base no que funciona para você.</p>
+      </div>
+      <div class="learn-grid">
+        <div class="fb-card reveal" id="fbCard">
+          <h3>☀ Como foi sua noite?</h3>
+          <small class="muted">Onde dormiu: Quarto</small>
+          <div class="chips" id="chips">
+            <button>Dormi bem</button><button>Frio</button><button>Calor</button><button>Ar seco</button>
+            <button>Ar abafado</button><button>Nariz entupido</button><button>Acordei à noite</button>
+          </div>
+          <div class="fb-actions"><span class="fb-done" id="fbDone">✓ Resposta registrada</span><button class="send" id="fbSend">Enviar</button></div>
+        </div>
+        <div class="fb-card reveal">
+          <h3>Suas noites</h3>
+          <small class="muted">cada resposta ajusta as próximas</small>
+          <div class="week" id="week"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÚVIDAS -->
+  <section class="s-light" id="duvidas">
+    <div class="wrap faq-wrap">
+      <div class="section-head left reveal">
+        <p class="eyebrow">dúvidas</p>
+        <h2>Perguntas<br>frequentes.</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal" open>
+          <summary>Preciso trocar meu ar-condicionado ou umidificador?</summary>
+          <p>A ideia é aproveitar os aparelhos que você já tem. O Sono Perfeito conversa com eles e faz os ajustes por você.</p>
+        </details>
+        <details class="reveal">
+          <summary>O Sono Perfeito aumenta o consumo de energia?</summary>
+          <p>Os sensores consomem muito pouco. Na prática, a automação ajuda a evitar desperdício: mantém o ar-condicionado na temperatura que você escolheu, em vez de deixá-lo gelando o quarto a noite toda, e desliga a TV e as luzes esquecidas. O consumo final depende de como você já usa o ar-condicionado hoje.</p>
+        </details>
+        <details class="reveal">
+          <summary>Funciona em mais de um cômodo?</summary>
+          <p>Sim. Cada cômodo tem o seu sensor e aparece separado no app — quarto, sala, escritório.</p>
+        </details>
+        <details class="reveal">
+          <summary>Ainda consigo controlar tudo manualmente?</summary>
+          <p>Sim. Você pode ajustar a temperatura, ligar ou desligar o umidificador e a TV pelo app a qualquer momento.</p>
+        </details>
+        <details class="reveal">
+          <summary>Como o app aprende o que é melhor para mim?</summary>
+          <p>Toda manhã ele pergunta como foi sua noite. Suas respostas — frio, calor, ar seco — ajustam as configurações das próximas noites.</p>
+        </details>
+        <details class="reveal">
+          <summary>O Sono Perfeito trata insônia ou problemas respiratórios?</summary>
+          <p>Não. Ele deixa o ambiente do quarto mais favorável ao sono, com luz, temperatura e umidade adequadas, mas não é um tratamento. Se a dificuldade para dormir continuar, procure um médico.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="s-dark s-final aurora" id="contato">
+    <div class="brand-block reveal">
+      <div class="app-icon"><img src="icon.svg" alt="Ícone do app Sono Perfeito"></div>
+      <h2 class="final-name">Sono Perfeito</h2>
+      <p class="tagline"><em>Respire melhor.</em> <em class="blue">Durma melhor.</em></p>
+      <p class="kicker">Temperatura · Umidade · Luz</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#" id="ctaMain">Quero o Sono Perfeito</a>
+        <a class="btn ghost" href="#como-funciona">Como funciona</a>
+      </div>
+    </div>
+    <footer class="foot">© <span id="yr"></span> Sono Perfeito · sonoperfeito.app · <a href="ciencia.html">A ciência do sono</a></footer>
+  </section>
+</main>
+
+<script src="script.js?v=10"></script>
+</body>
+</html>
