@@ -237,9 +237,4 @@
 
   /* footer / CTA */
   $('#yr').textContent = new Date().getFullYear();
-  $('#ctaMain').addEventListener('click', e => {
-    e.preventDefault();
-    // TODO: trocar pelo link real (WhatsApp, loja de apps ou formulário)
-    location.href = 'mailto:contato@sonoperfeito.app?subject=Quero%20o%20Sono%20Perfeito';
-  });
 })();
